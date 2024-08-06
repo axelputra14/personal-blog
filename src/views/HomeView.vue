@@ -1,9 +1,13 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<script>
+import HelloWorld from "../components/HelloWorld.vue";
+export default {
+  name: "HomeView",
+  components: { HelloWorld },
+};
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="bg-zinc-900 h-screen w-screen flex justify-center items-center">
+    <HelloWorld />
   </main>
 </template>
