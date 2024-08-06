@@ -1,10 +1,10 @@
 # Vue-boilerplate
 
-Personal Vue boilerplate.
+Personal Vue boilerplate with Javascript. For a bit faster starting.
 
 # Tech stacks
 
-Vite, Vue, Vue Router, Pinia, TailwindCSS.
+Javascript, Vite, Vue, Vue Router, Pinia, TailwindCSS.
 
 # License
 
