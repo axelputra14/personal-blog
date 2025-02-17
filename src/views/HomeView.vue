@@ -9,10 +9,30 @@ export default {
 <template>
   <main class="bg-stone-900">
     <div class="pt-8 pb-16 lg:pt-16 lg:pb-24 antialiased">
-      <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
+      <div class="flex justify-between px-4 mx-auto max-w-(--breakpoint-xl)">
         <article
           class="mx-auto w-full max-w-6xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
         >
+          <a
+            class="inline-flex items-center gap-x-1.5 text-sm text-stone-400 decoration-2 hover:underline focus:outline-none focus:underline"
+            href="#"
+          >
+            <svg
+              class="shrink-0 size-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m15 18-6-6 6-6" />
+            </svg>
+            Back to Blog
+          </a>
           <header class="mb-4 lg:mb-6 not-format">
             <address class="flex items-center mb-6 not-italic">
               <div class="inline-flex items-center mr-3 text-sm">
