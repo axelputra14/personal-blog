@@ -2,9 +2,10 @@
 import Header from "@/components/Header.vue";
 import HelloWorld from "../components/HelloWorld.vue";
 import Navbar from "@/components/Navbar.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   name: "HomeView",
-  components: { HelloWorld, Header, Navbar },
+  components: { HelloWorld, Header, Navbar, Footer },
 };
 </script>
 
@@ -163,5 +164,6 @@ export default {
         </a>
       </div>
     </div>
+    <Footer />
   </main>
 </template>
