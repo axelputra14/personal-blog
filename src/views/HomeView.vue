@@ -1,20 +1,25 @@
 <script>
+import Header from "@/components/Header.vue";
 import HelloWorld from "../components/HelloWorld.vue";
+import Navbar from "@/components/Navbar.vue";
 export default {
   name: "HomeView",
-  components: { HelloWorld },
+  components: { HelloWorld, Header, Navbar },
 };
 </script>
 
 <template>
   <main class="bg-stone-900">
-    <div class="pt-8 pb-16 lg:pt-16 lg:pb-24 antialiased">
+    <Header />
+
+    <div class="pt-4 pb-8 lg:pt-4 lg:pb-8 antialiased">
+      <Navbar />
       <div class="flex justify-between px-4 mx-auto max-w-(--breakpoint-xl)">
         <article
           class="mx-auto w-full max-w-6xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
         >
           <a
-            class="inline-flex items-center gap-x-1.5 text-sm text-stone-400 decoration-2 hover:underline focus:outline-none focus:underline"
+            class="inline-flex items-center gap-x-1.5 text-sm text-stone-400 decoration-2 hover:text-[#ffc444] focus:outline-none"
             href="#"
           >
             <svg
@@ -99,6 +104,63 @@ export default {
             </figcaption>
           </figure>
         </article>
+      </div>
+    </div>
+    <div
+      class="px-8 py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-[#ff4480] dark:before:border-neutral-600 dark:after:border-neutral-600"
+    >
+      Other Posts
+    </div>
+
+    <div class="flex justify-evenly items-center">
+      <div class="flex flex-wrap">
+        <a
+          href="#"
+          class="flex items-center py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-stone-200 md:dark:hover:text-[#ffc444] dark:hover:bg-gray-700 dark:hover:text-[#ffc444] md:dark:hover:bg-transparent"
+        >
+          <svg
+            class="shrink-0 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
+            ></path>
+          </svg>
+          About
+        </a>
+      </div>
+
+      <div class="flex flex-wrap">
+        <a
+          href="#"
+          class="flex items-center py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-stone-200 md:dark:hover:text-[#ffc444] dark:hover:bg-gray-700 dark:hover:text-[#ffc444] md:dark:hover:bg-transparent"
+        >
+          Bro
+          <svg
+            class="shrink-0 size-4"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
+            ></path>
+          </svg>
+        </a>
       </div>
     </div>
   </main>
