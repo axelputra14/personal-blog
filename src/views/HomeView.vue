@@ -3,9 +3,24 @@ import Header from "@/components/Header.vue";
 import HelloWorld from "../components/HelloWorld.vue";
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
+import BlogSlug from "@/components/BlogSlug.vue";
+
 export default {
   name: "HomeView",
-  components: { HelloWorld, Header, Navbar, Footer },
+  components: { HelloWorld, Header, Navbar, Footer, BlogSlug },
+  data() {
+    return {
+      posts: [
+        {
+          title: "Ini Judul",
+          author: "Somebody",
+          post_date: "2025-02-14",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dapibus ligula non ante imperdiet tempor. Suspendisse ut tortor urna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla pellentesque magna nec tellus placerat, nec fermentum nunc maximus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec eleifend ultricies leo id ultricies. Phasellus a lacinia diam, id rutrum eros. Sed tincidunt tempor dictum. Vivamus sit amet convallis lectus, sed luctus orci. Nulla bibendum, nulla at varius ullamcorper, lectus dolor rhoncus justo, in accumsan nunc ante eu enim. Donec pretium nunc nec rhoncus tincidunt. In hac habitasse platea dictumst. Pellentesque sagittis sollicitudin laoreet. Nam sed commodo elit. Mauris malesuada ante non diam tristique, sit amet malesuada urna commodo.",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -16,95 +31,7 @@ export default {
     <div class="pt-4 pb-8 lg:pt-4 lg:pb-8 antialiased">
       <Navbar />
       <div class="flex justify-between px-4 mx-auto max-w-(--breakpoint-xl)">
-        <article
-          class="mx-auto w-full max-w-6xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"
-        >
-          <a
-            class="inline-flex items-center gap-x-1.5 text-sm text-stone-400 decoration-2 hover:text-[#ffc444] focus:outline-none"
-            href="#"
-          >
-            <svg
-              class="shrink-0 size-4"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="m15 18-6-6 6-6" />
-            </svg>
-            Back to Blog
-          </a>
-          <header class="mb-4 lg:mb-6 not-format">
-            <address class="flex items-center mb-6 not-italic">
-              <div class="inline-flex items-center mr-3 text-sm">
-                <img
-                  class="mr-4 w-16 h-16 rounded-full"
-                  src="https://flowbite.com/docs/images/people/profile-picture-2.jpg"
-                  alt="Jese Leos"
-                />
-                <div>
-                  <a
-                    href="#"
-                    rel="author"
-                    class="text-xl font-bold text-gray-900 dark:text-[#44ddff]"
-                    >Jese Leos</a
-                  >
-                  <p class="text-base text-gray-500 dark:text-stone-400">
-                    Graphic Designer, educator & CEO Flowbite
-                  </p>
-                  <p class="text-base text-gray-500 dark:text-stone-400">
-                    <time
-                      pubdate
-                      datetime="2025-02-17"
-                      title="17th February 2022"
-                      >17 February 2025</time
-                    >
-                  </p>
-                </div>
-              </div>
-            </address>
-            <h1
-              class="mb-4 text-3xl font-extrabold leading-tight text-stone-200 lg:mb-6 lg:text-4xl"
-            >
-              Best practices for successful prototypes
-            </h1>
-          </header>
-          <p class="lead text-stone-300">
-            Flowbite is an open-source library of UI components built with the
-            utility-first classes from Tailwind CSS. It also includes
-            interactive elements such as dropdowns, modals, datepickers.
-          </p>
-          <p class="text-stone-300">
-            Before going digital, you might benefit from scribbling down some
-            ideas in a sketchbook. This way, you can think things through before
-            committing to an actual design project.
-          </p>
-          <p class="text-zinc-300">
-            But then I found a
-            <a
-              href="https://flowbite.com"
-              class="text-stone-100 hover:text-pink-400"
-              >component library based on Tailwind CSS called Flowbite</a
-            >. It comes with the most commonly used UI components, such as
-            buttons, navigation bars, cards, form elements, and more which are
-            conveniently built with the utility classes from Tailwind CSS.
-          </p>
-          <figure>
-            <img
-              src="https://flowbite.s3.amazonaws.com/typography-plugin/typography-image-1.png"
-              alt=""
-              class="mx-auto"
-            />
-            <figcaption class="text-center text-stone-300">
-              Digital art by Anonymous
-            </figcaption>
-          </figure>
-        </article>
+        <BlogSlug />
       </div>
     </div>
     <div
