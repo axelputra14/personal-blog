@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <nav class="bg-stone-900">
+  <nav class="bg-stone-100">
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4"
     >
