@@ -24,7 +24,7 @@ export default {
 </script>
 
 <template>
-  <main class="bg-stone-100">
+  <main class="bg-stone-200">
     <Header />
 
     <div class="pt-4 pb-8 lg:pt-4 lg:pb-8 antialiased">
@@ -55,8 +55,9 @@ export default {
           </p>
           <br />
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- card begins -->
             <div class="card">
-              <section class="landscape-section">
+              <section class="cover-section">
                 <img
                   class="w-full h-full object-cover"
                   src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
@@ -64,7 +65,7 @@ export default {
               </section>
 
               <section class="content-section">
-                <div class="weather-info">
+                <div class="score-info">
                   <div class="left-side">
                     <div class="icon">
                       <!-- <svg
@@ -93,7 +94,7 @@ export default {
                         width="32"
                         height="32"
                         fill="currentColor"
-                        class="bi bi-check-circle"
+                        class="bi bi-check-circle text-green-400"
                         viewBox="0 0 16 16"
                       >
                         <path
@@ -106,10 +107,10 @@ export default {
                     </div>
                   </div>
                   <div class="right-side">
-                    <p class="temperature">90/100</p>
+                    <p class="score">90</p>
                   </div>
                 </div>
-                <div class="forecast">
+                <div class="title-detail">
                   <div>
                     <p class="pl-4">CIRCUS</p>
                   </div>
@@ -124,6 +125,7 @@ export default {
                 </div>
               </section>
             </div>
+            <!-- card ends -->
           </div>
         </article>
       </div>
@@ -138,7 +140,7 @@ export default {
   </main>
 </template>
 <style scoped>
-.forecast {
+.title-detail {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,13 +150,13 @@ export default {
   padding: 10px 0 0 0;
 }
 
-.forecast > div {
+.title-detail > div {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: lightslategray;
-  font-size: 9pt;
+  color: rgb(26, 31, 36);
+  font-size: 10pt;
 }
 
 .title {
@@ -176,223 +178,10 @@ export default {
   position: relative;
   width: 220px;
   height: 350px;
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   box-shadow: 12px 12px 0px rgba(0, 0, 0, 0.1);
   background-color: white;
-}
-
-/* Landscape section */
-.landscape-section {
-  position: relative;
-  width: 100%;
-  height: 70%;
-  overflow: hidden;
-}
-
-.landscape-section * {
-  position: absolute;
-}
-
-.sky {
-  width: 100%;
-  height: 100%;
-  background: rgb(175, 243, 230);
-  background: linear-gradient(
-    0deg,
-    rgba(175, 243, 230, 1) 0%,
-    rgba(65, 131, 170, 1) 100%
-  );
-}
-
-.moon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  bottom: 40%;
-  left: 23%;
-  filter: drop-shadow(0px 0px 10px white);
-}
-
-.shine-1 {
-  width: 134%;
-  height: 134%;
-  border-radius: 50%;
-  background-color: #b6ebe7;
-  opacity: 0.3;
-}
-
-.shine-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 118%;
-  height: 118%;
-  border-radius: 50%;
-  background-color: #b6e8eb;
-}
-
-.moon-shape {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  top: -25%;
-  right: -25%;
-  background-color: #b6e8eb;
-}
-
-.real-moon {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: white;
-  overflow: hidden;
-}
-
-.ocean {
-  overflow: hidden;
-  bottom: 0;
-  width: 100%;
-  height: 28%;
-  background: rgb(140, 232, 225);
-  background: linear-gradient(
-    0deg,
-    rgba(140, 232, 225, 1) 0%,
-    rgba(141, 233, 221, 1) 100%
-  );
-}
-
-.reflection {
-  position: absolute;
-  background-color: white;
-  opacity: 0.5;
-  z-index: 1;
-}
-
-.reflection:nth-child(1) {
-  width: 40px;
-  height: 10px;
-  clip-path: polygon(0% 0%, 100% 0%, 50% 20%);
-  top: 5%;
-  left: 32%;
-}
-
-.reflection:nth-child(2) {
-  width: 80px;
-  height: 15px;
-  clip-path: polygon(0% 0%, 100% 0%, 60% 20%, 40% 20%);
-  top: 15%;
-  left: 39%;
-}
-
-.reflection:nth-child(3) {
-  width: 60px;
-  height: 2px;
-  clip-path: polygon(0% 50%, 40% 0%, 60% 0%, 100% 50%, 60% 100%, 40% 100%);
-  top: 27%;
-  right: 15%;
-}
-
-.reflection:nth-child(4) {
-  width: 70px;
-  height: 2px;
-  clip-path: polygon(0% 50%, 40% 0%, 60% 0%, 100% 50%, 60% 100%, 40% 100%);
-  top: 37%;
-  right: 28%;
-}
-.reflection:nth-child(5) {
-  width: 70px;
-  height: 3px;
-  clip-path: polygon(0% 50%, 40% 0%, 60% 0%, 100% 50%, 60% 100%, 40% 100%);
-  top: 46%;
-  right: 8%;
-}
-
-.hill-1 {
-  right: -25%;
-  bottom: 20%;
-  width: 150px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #4bcacc;
-}
-
-.shadow-hill-1 {
-  right: -25%;
-  top: -30%;
-  width: 150px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #88d8d7;
-  opacity: 1;
-}
-
-.hill-2 {
-  right: -36%;
-  bottom: 10%;
-  width: 150px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #3f85a8;
-}
-
-.shadow-hill-2 {
-  right: -36%;
-  top: -65%;
-  width: 150px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #73c8cf;
-  opacity: 1;
-}
-
-.hill-3 {
-  left: -100%;
-  bottom: -30%;
-  width: 350px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #47567f;
-  z-index: 3;
-}
-
-.tree-1 {
-  bottom: 19%;
-  left: 3%;
-  width: 50px;
-  height: 70px;
-  z-index: 3;
-}
-
-.tree-2 {
-  bottom: 12%;
-  left: 25%;
-  width: 50px;
-  height: 70px;
-  z-index: 3;
-}
-
-.hill-4 {
-  right: -100%;
-  bottom: -40%;
-  width: 350px;
-  height: 150px;
-  border-radius: 50%;
-  background-color: #4a4973;
-  z-index: 3;
-}
-
-.tree-3 {
-  bottom: 10%;
-  right: 1%;
-  width: 65px;
-  height: 80px;
-  z-index: 3;
 }
 
 .filter {
@@ -407,6 +196,17 @@ export default {
   opacity: 0.2;
 }
 
+.cover-section {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+
+.cover-section * {
+  position: absolute;
+}
+
 /* Content section */
 .content-section {
   width: 100%;
@@ -416,21 +216,23 @@ export default {
   align-items: center;
 }
 
-.weather-info {
+.score-info {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   position: absolute;
   text-align: center;
   top: 0;
   right: 0%;
   width: 100%;
-  padding-top: 15px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   color: white;
   z-index: 10;
 }
 
-.weather-info .left-side:not(.icon) {
+.score-info .left-side:not(.icon) {
   width: 20%;
   font-size: 11pt;
   font-weight: 600;
@@ -445,21 +247,23 @@ export default {
 
 .icon svg {
   width: 40px;
+  filter: drop-shadow(0 0 0.25rem rgba(90, 90, 90, 0.3));
 }
 
-.weather-info .right-side {
+.score-info .right-side {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  filter: drop-shadow(0 0 0.5rem rgba(90, 90, 90, 0.5));
 }
 
-.weather-info .right-side p:nth-child(2) {
+.score-info .right-side p:nth-child(2) {
   font-size: 9pt;
   margin: 0;
   padding: 0;
 }
 
-.weather-info .location span {
+.score-info .location span {
   font-size: 11pt;
   font-weight: 700;
   text-transform: uppercase;
@@ -479,7 +283,7 @@ export default {
   height: auto;
 }
 
-.temperature {
+.score {
   font-size: 20pt;
   font-weight: 700;
   line-height: 30px;

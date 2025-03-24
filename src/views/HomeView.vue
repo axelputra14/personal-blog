@@ -25,72 +25,105 @@ export default {
 </script>
 
 <template>
-  <main class="bg-stone-900">
+  <main class="bg-stone-200">
     <Header />
 
     <div class="pt-4 pb-8 lg:pt-4 lg:pb-8 antialiased">
       <Navbar />
-      <div class="flex justify-between px-4 mx-auto max-w-(--breakpoint-xl)">
-        <BlogSlug />
-      </div>
     </div>
-    <div
-      class="px-8 py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-200 before:me-6 after:flex-1 after:border-t after:border-gray-200 after:ms-6 dark:text-[#ff4480] dark:before:border-neutral-600 dark:after:border-neutral-600"
-    >
-      Other Posts
+    <div class="flex justify-between px-4 mx-auto max-w-(--breakpoint-xl)">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+        repellendus dolorem quas eos voluptatibus. Ipsa quaerat quisquam nihil
+        ipsum dolor eum error! Sequi architecto assumenda harum debitis, dolor
+        esse? Quidem.
+      </p>
+    </div>
+    <br />
+    <div class="flex justify-center px-4 mx-auto max-w-(--breakpoint-xl)">
+      <div class="grid grid-cols-1 gap-6">
+        <div
+          class="banner flex flex-col items-center relative w-full h-48 rounded-xl overflow-hidden cursor-pointer"
+        >
+          <img src="https://picsum.photos/1000/300" />
+          <section class="content-section">
+            <div class="title-side">
+              <p class="banner-title">55555effffffffffe33333390</p>
+            </div>
+          </section>
+        </div>
+        <div
+          class="banner flex flex-col items-center relative w-full h-48 rounded-xl overflow-hidden cursor-pointer"
+        >
+          <img src="https://picsum.photos/1000/300" />
+        </div>
+        <div
+          class="banner flex flex-col items-center relative w-full h-48 rounded-xl overflow-hidden cursor-pointer"
+        >
+          <img src="https://picsum.photos/1000/300" />
+        </div>
+      </div>
     </div>
 
-    <div class="flex justify-evenly items-center">
-      <div class="flex flex-wrap">
-        <a
-          href="#"
-          class="flex items-center py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-stone-200 md:dark:hover:text-[#ffc444] dark:hover:bg-gray-700 dark:hover:text-[#ffc444] md:dark:hover:bg-transparent"
-        >
-          <svg
-            class="shrink-0 size-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-            ></path>
-          </svg>
-          About
-        </a>
-      </div>
-
-      <div class="flex flex-wrap">
-        <a
-          href="#"
-          class="flex items-center py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-stone-200 md:dark:hover:text-[#ffc444] dark:hover:bg-gray-700 dark:hover:text-[#ffc444] md:dark:hover:bg-transparent"
-        >
-          Bro
-          <svg
-            class="shrink-0 size-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"
-            ></path>
-          </svg>
-        </a>
-      </div>
-    </div>
     <Footer />
   </main>
 </template>
+
+<style scoped>
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.5s ease-in-out;
+}
+
+.banner:hover::after {
+  left: 50%;
+}
+
+.content-section {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  text-align: end;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  z-index: 10;
+  display: inline-block;
+  background-color: aqua;
+}
+
+.banner-title {
+  font-size: 20pt;
+  font-weight: 700;
+  line-height: 30px;
+}
+</style>
