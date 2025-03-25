@@ -113,12 +113,13 @@ export default {
   bottom: 0;
   right: 0;
   width: fit-content;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: white;
   z-index: 10;
   display: inline-block;
   background-color: aqua;
+  clip-path: polygon(3% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .banner-title {

@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import VNView from "@/views/VNView.vue";
+import thesantipaView from "@/views/thesantipaView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -19,6 +20,11 @@ const router = createRouter({
       path: "/vn-list",
       name: "vnlist",
       component: VNView,
+    },
+    {
+      path: "/thesantipa-list",
+      name: "thesantipalist",
+      component: thesantipaView,
     },
   ],
 });

@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
-  name: "VNView",
+  name: "thesantipaView",
   components: { HelloWorld, Header, Navbar, Footer },
   data() {
     return {
@@ -37,12 +37,14 @@ export default {
             <h1
               class="mb-4 text-3xl leading-tight text-stone-800 lg:mb-6 lg:text-4xl"
             >
-              Visual Novel List
+              thesantipa Lists
             </h1>
           </header>
           <p class="text-stone-900">
-            List of Visual Novels I have finished or bothered putting them in
-            the list.
+            I welcome you upon my delusion of fictional motorsport group in a
+            fictional world. thesantipa, short for "The Nations and the
+            Territories of the Pacific" is a fictional motorsport group that
+            holds races in Oceania region.
           </p>
           <br />
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
