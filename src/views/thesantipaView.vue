@@ -48,77 +48,58 @@ export default {
           </p>
           <br />
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- card begins -->
+            <!-- card copy begins-->
             <div class="card">
-              <section class="cover-section">
-                <img
-                  class="w-full h-full object-cover"
-                  src="https://tecdn.b-cdn.net/img/new/standard/nature/186.jpg"
-                />
-              </section>
-              <!-- hover:scale-105 duration-700 for schedule type -->
-              <section class="content-section">
-                <div class="score-info">
-                  <div class="left-side">
-                    <div class="icon">
-                      <!-- <svg
-                        stroke="#000000"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-                        <g
-                          stroke-linejoin="round"
-                          stroke-linecap="round"
-                          id="SVGRepo_tracerCarrier"
-                        ></g>
-                        <g id="SVGRepo_iconCarrier">
-                          <path
-                            stroke-linecap="round"
-                            stroke-width="1.5"
-                            stroke="#ffffff"
-                            d="M22 14.3529C22 17.4717 19.4416 20 16.2857 20H11M14.381 9.02721C14.9767 8.81911 15.6178 8.70588 16.2857 8.70588C16.9404 8.70588 17.5693 8.81468 18.1551 9.01498M7.11616 11.6089C6.8475 11.5567 6.56983 11.5294 6.28571 11.5294C3.91878 11.5294 2 13.4256 2 15.7647C2 18.1038 3.91878 20 6.28571 20H7M7.11616 11.6089C6.88706 10.9978 6.7619 10.3369 6.7619 9.64706C6.7619 6.52827 9.32028 4 12.4762 4C15.4159 4 17.8371 6.19371 18.1551 9.01498M7.11616 11.6089C7.68059 11.7184 8.20528 11.9374 8.66667 12.2426M18.1551 9.01498C18.8381 9.24853 19.4623 9.60648 20 10.0614"
-                          ></path>
-                        </g>
-                      </svg> -->
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="32"
-                        fill="currentColor"
-                        class="bi bi-check-circle text-green-400"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"
-                        />
-                        <path
-                          d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"
-                        />
-                      </svg>
+              <div
+                class="grid grid-cols-1 items-center justify-center p-2 mb-4 bg-zinc-100 w-full"
+              >
+                <p class="text-center mx-auto text-xl font-bold">Kanak</p>
+              </div>
+              <div
+                class="grid grid-cols-4 gap-2 items-center justify-center px-2 mb-4"
+              >
+                <div class="col-span-1">
+                  <div class="">
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Flag_of_test.svg/330px-Flag_of_test.svg.png"
+                    />
+                  </div>
+                </div>
+                <div class="col-span-3 font-bold">
+                  Acura Grand Prix of Long Beach
+                </div>
+              </div>
+              <div class="event-card-bottom">
+                <div
+                  class="grid grid-cols-4 gap-2 items-center justify-center p-2 mb-4 bg-white"
+                >
+                  <div class="col-span-3">
+                    <div class="event-card-track-name">
+                      Streets of Long Beach
+                    </div>
+                    <div class="event-card-track-location">
+                      Long Beach, California
                     </div>
                   </div>
-                  <div class="right-side">
-                    <p class="score">90</p>
+                  <div class="col-span-1">
+                    <img
+                      src="https://digbza2f4g9qo.cloudfront.net/-/media/IndyCar/Schedules/TrackOutlines/Black/LongBeach.png?vs=1&amp;d=20151012T192221Z"
+                      alt=""
+                      data-uw-rm-alt-original=""
+                      role="presentation"
+                      data-uw-rm-alt="SM"
+                    />
                   </div>
                 </div>
-                <div class="title-detail">
-                  <div>
-                    <p class="pl-4">CIRCUS</p>
-                  </div>
-                  <div class="separator"></div>
-                  <div>
-                    <p class="pl-4">今日はいい天気ですね</p>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="title">
-                    <p class="text-white pl-4">Title Title Title</p>
-                  </div>
+                <div class="w-full h-full flex-1">
+                  <img
+                    src="https://digbza2f4g9qo.cloudfront.net/-/media/IndyCar/Schedules/EventScenesWide/LongBeach.jpg?vs=1&amp;d=20240916T172125Z"
+                    class="w-full h-full object-cover"
+                  />
                 </div>
-              </section>
+              </div>
             </div>
-            <!-- card ends -->
+            <!-- card copy ends-->
           </div>
         </article>
       </div>
@@ -133,6 +114,15 @@ export default {
   </main>
 </template>
 <style scoped>
+.event-card-bottom {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.event-card-bottom img {
+  flex-grow: 1;
+}
 .title-detail {
   display: flex;
   flex-direction: column;
@@ -169,7 +159,7 @@ export default {
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 220px;
+  width: 280px;
   height: 350px;
   border-radius: 15px;
   overflow: hidden;

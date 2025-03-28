@@ -42,7 +42,8 @@ export default {
     <br />
     <div class="flex justify-center px-4 mx-auto max-w-(--breakpoint-xl)">
       <div class="grid grid-cols-1 gap-6">
-        <div
+        <RouterLink
+          to="/vn-list"
           class="banner flex flex-col items-center relative w-full h-48 rounded-xl overflow-hidden cursor-pointer"
         >
           <img src="https://picsum.photos/1000/300" />
@@ -51,17 +52,18 @@ export default {
               <p class="banner-title">55555effffffffffe33333390</p>
             </div>
           </section>
-        </div>
-        <div
+        </RouterLink>
+        <RouterLink
+          to="thesantipa-list"
           class="banner flex flex-col items-center relative w-full h-48 rounded-xl overflow-hidden cursor-pointer"
         >
           <img src="https://picsum.photos/1000/300" />
-        </div>
-        <div
-          class="banner flex flex-col items-center relative w-full h-48 rounded-xl overflow-hidden cursor-pointer"
-        >
-          <img src="https://picsum.photos/1000/300" />
-        </div>
+          <section class="content-section">
+            <div class="title-side">
+              <p class="banner-title">55555effffffffffe33333390</p>
+            </div>
+          </section>
+        </RouterLink>
       </div>
     </div>
 

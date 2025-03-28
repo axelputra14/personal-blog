@@ -30,10 +30,29 @@ export default {
               >VN List</RouterLink
             >
           </li>
+          <li>
+            <RouterLink
+              to="/thesantipa-list"
+              class="block py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-stone-900 md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >thesantipa List</RouterLink
+            >
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 </template>
 
-<style scoped></style>
+<style scoped>
+li:after {
+  transition: all ease-in-out 0.2s;
+  background: none repeat scroll 0 0 #44699b;
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+}
+li:hover:after {
+  width: 100%;
+}
+</style>
