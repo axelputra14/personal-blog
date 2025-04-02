@@ -107,15 +107,11 @@ export default {
                   </div>
                   <div class="separator"></div>
                   <div>
-                    <p class="pl-4">Kyou no tenki wa ii ne</p>
-                  </div>
-                  <div class="separator"></div>
-                  <div>
                     <p class="pl-4">今日はいい天気ですね</p>
                   </div>
                   <div class="separator"></div>
                   <div class="title">
-                    <p class="text-white pl-4">nanti logo</p>
+                    <p class="text-white pl-4">Title Title Title</p>
                   </div>
                 </div>
               </section>
