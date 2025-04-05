@@ -32,7 +32,7 @@ export default {
       <Navbar />
     </div>
     <div class="flex justify-between px-4 mx-auto max-w-(--breakpoint-xl)">
-      <p>
+      <p class="giraty">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
         repellendus dolorem quas eos voluptatibus. Ipsa quaerat quisquam nihil
         ipsum dolor eum error! Sequi architecto assumenda harum debitis, dolor
