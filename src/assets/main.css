@@ -29,7 +29,3 @@ body {
 #app {
   font-family: "Noto Sans", sans-serif;
 }
-
-.giraty {
-  @apply rounded-b-lg shadow-md;
-}
