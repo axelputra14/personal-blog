@@ -37,6 +37,13 @@ export default {
               >thesantipa List</RouterLink
             >
           </li>
+          <li>
+            <RouterLink
+              to="/playground"
+              class="block py-2 px-3 rounded-sm md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 text-stone-900 md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >Playground</RouterLink
+            >
+          </li>
         </ul>
       </div>
     </div>
