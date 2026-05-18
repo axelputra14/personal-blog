@@ -56,6 +56,8 @@ export default {
         <div class="glass-glider-vertical"></div>
       </div>
     </div>
+    <h3>Experimental blog</h3>
+    <BlogSlug />
     <Footer />
   </main>
 </template>
